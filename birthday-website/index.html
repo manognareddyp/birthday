@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎂</title>
+
+  <!-- Margarine Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Background Music -->
+  <audio id="bgMusic"></audio>
+
+
+  <!-- ================= WELCOME POPUP ================= -->
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <h2>👋 Welcome Mr. Bharadwaj!</h2>
+        <h3>Plug your earphones and proceed</h3>
+      <button onclick="goToListen()">Done, as you say</button>
+    </div>
+  </div>
+  <!-- ================= VOICE NOTE POPUP ================= -->
+<div id="voiceModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>🎧 A small voice note for you</h2>
+    <button onclick="playVoice()">Play</button>
+  </div>
+</div>
+
+<!-- Voice Note Audio -->
+<audio id="voiceNote" src="Voice.mp3" preload="auto"></audio>
+
+
+  <!-- ================= LISTEN POPUP ================= -->
+  <div id="listenModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Music included..... and a little surprise!!</h2>
+      <h3>Note:-Lyrics are fictional. It represents nothing.......</h3>
+      <button onclick="startExperience()">Readyyyy</button>
+    </div>
+  </div>
+
+  <!-- ================= BIRTHDAY CARD ================= -->
+  <div id="birthdayCard" class="card hidden">
+    <h1>🎂 Happy Birthday Psycho garu!</h1>
+
+    <p id="countdown">Loading...</p>
+
+    <p class="message">
+      "What is meant to be will always find a way" and
+      Wishing you a day filled with joy, smiles and surprises smiles Mr.
+    </p>
+
+    <div class="buttons">
+      <button onclick="showSurprise()">🎁 Surprise</button>
+      <button onclick="launchConfetti()">🎉 Celebrate</button>
+    </div>
+
+    <p id="surprise" class="hidden">
+      Even though distance separates us, you are with me in everything that truly matters. 
+      From late-night project doubts to “do not worry, I have got this” moments, you have always been my constant.
+      You are the kind of nerd who turns problems into solutions and stress into calm—and I am endlessly 
+      grateful for that.Distance never stood a chance against our bond.
+      Happy Birthday to my favorite brain, my biggest support, and someone I am lucky to have in my life—always,
+      no matter the distance.
+    </p>
+  </div>
+
+  <!-- ================= MEMORIES (SLIDESHOW) ================= -->
+  <div id="memories" class="hidden">
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="backToCard()">⬅ Back to card</button>
+
+   <!-- Slideshow -->
+<div class="slideshow">
+  <div class="slide-container">
+
+    <img
+      id="slideImage"
+      class="slide hidden"
+      alt="Memory photo"
+    >
+
+    <video
+  id="slideVideo"
+  class="slide hidden"
+  muted
+  playsinline
+  preload="auto"
+></video>
+  </div>
+</div>
+
+
+    <!-- Hearts / Sparkles -->
+    <div class="hearts"></div>
+
+  </div>
+
+  <!-- ================= CONFETTI LIBRARY ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- ================= MAIN SCRIPT ================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>

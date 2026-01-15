@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  font-family: 'Margarine', cursive;
+  overflow: hidden;
+}
+
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Slideshow */
+.slideshow {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#slideImage {
+  opacity: 1;
+  transition: opacity 1.2s ease-in-out;
+}
+
+/* Fade effect */
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Hearts & sparkles */
+.hearts span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
